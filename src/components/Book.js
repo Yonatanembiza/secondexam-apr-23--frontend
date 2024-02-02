@@ -1,16 +1,23 @@
-import React from 'react'
+// Book.js
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Book = (props) => {
-
-    return (
-        <div className="Content" onClick={props.clicked}>
+    const x = console.log(props);
+  return (
+    <div>
+        <p>{x}</p>
+        <Link to={`/books/${props.id}`}>
+        <div className="Content">
             <p>{props.title}</p>
             <div className="Info">
-                <br/>
-                <div className="Author">{props.price}$</div>
+            <br />
+            <div className="Author">{props.price}$</div>
             </div>
         </div>
-    );
-}
+        </Link>
+    </div>
+  );
+};
 
-export default Book
+export default Book;

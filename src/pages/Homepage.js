@@ -1,18 +1,26 @@
-import React from 'react'
-import './Homepage.css'
+// Homepage.js
+import React from 'react';
+import { Link } from 'react-router-dom';
+import './Homepage.css';
 
 const Homepage = () => {
   return (
     <div>
-        <h1>Homepage</h1>
+      <h1>Homepage</h1>
 
-<ul class="list">
-    <li class="i-one">Books</li>
-    <li class="i-two">Add Book</li>
-    <li class="i-three">Selected Books</li>
-</ul>
+      <ul className="list">
+        <li className="i-one">
+          <Link to="/books">Books</Link>
+        </li>
+        <li className="i-two">
+          <Link to="/addbook">Add Book</Link>
+        </li>
+        <li className="i-three">
+          <Link to="/selectedbooks">Selected Books</Link>
+        </li>
+      </ul>
     </div>
-  )
-}
+  );
+};
 
-export default Homepage
+export default Homepage;
